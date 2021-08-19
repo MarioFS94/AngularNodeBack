@@ -7,6 +7,9 @@ const app = express();
 //conectamos a la BD
 conectarDB();
 
+//habilitamos para que nos puedan enviar json
+app.use(express.json());
+
 app.use('/api/productos', require('./routes/productos'));
 
 //definimos ruta principal
